@@ -1,12 +1,13 @@
 @use 'reset';
 @use 'fonts';
 @import "~bootstrap/scss/bootstrap";
-body {
-    font-family: Comfortaa;
-}
+
+// Шрифт
+$f_c: Comfortaa, sans-serif;
+
 // Титульний текст 
 .tit_text_learn{
-    font: 600 25px Comfortaa;
+    font: 600 25px $f_c;
     margin: 30px auto;
     text-align: center;
     text-transform: uppercase;
