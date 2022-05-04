@@ -56,4 +56,17 @@ code{
 }
 .list_style_accord {
     margin-bottom: 5px;
+    position: relative;
+
+    &:before{
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: url('../img/caret-right-fill.svg');
+        background-size: cover;
+        position: absolute;
+        left: -22px;
+        top: 3px;
+    
+        }
 }
