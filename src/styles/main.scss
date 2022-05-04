@@ -57,6 +57,9 @@ code{
 .list_style_accord {
     margin-bottom: 5px;
     position: relative;
+    transition: .4s all ease-in-out;
+    padding: 3px 5px;
+    border-radius: 10px;
 
     &:before{
         content: "";
@@ -66,7 +69,10 @@ code{
         background-size: cover;
         position: absolute;
         left: -22px;
-        top: 3px;
+        top: 6px;
     
         }
+    &:hover {
+        background-color: rgba(129, 129, 129, 0.17);
+    }
 }
