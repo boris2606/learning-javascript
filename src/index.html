@@ -34,32 +34,34 @@
                             <p class="preff_txt">Таблиця пріорітетності операторів знаходиться за посиланням: </p>
                             <a class="preff_link" href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence" target="_black"> Перейти до таблиці</a>
                         </div>
-                        <div class="oper_wrapp_list">
-                            <div class="">
-                                <p class="oper_tit">Оператори порівняння: </p>
-                                <ul>
-                                    <li><code> > </code> суворо більше </li>
-                                    <li><code> < </code> суворо менше </li>
-                                    <li><code> >= </code> більше або дорівнює </li>
-                                    <li><code> <= </code> меньше або дорівнює </li>
-                                </ul>
-                            </div>
-                            <div class="">
-                                <p class="oper_tit">Умовні оператори: </p>
-                                <ul>
-                                    <li><code> > </code> суворо більше </li>
-                                    <li><code> < </code> суворо менше </li>
-                                    <li><code> >= </code> більше або дорівнює </li>
-                                    <li><code> <= </code> меньше або дорівнює </li>
-                                </ul>
-                            </div>
-                        </div>
                         <ul>
                             <li class="list_style_accord"> Оператори <code> + - * / </code> виконують дії згідно математичних обчислень </li>
                             <li class="list_style_accord"> При використанні оператора <code>++</code> до змінної <code>(прикад: year++)</code> буде виконано інкрементування, тобто збільшення значення змінної після зчитування <code>+1</code>, якщо використати перед змінною <code>(прикад: ++year)</code> буде виконано спочатку збільшення на <code>+1</code> потім зчитування</li>
                             <li class="list_style_accord"> При використанні оператора <code>--</code> до змінної <code>(прикад: year--)</code> буде виконано інкрементування, тобто зменшення значення змінної після зчитування <code>-1</code>, якщо використати перед змінною <code>(прикад: --year)</code> буде виконано спочатку зменшення на <code>-1</code> потім зчитування</li>
                             <li class="list_style_accord"> При перепризначення однієї змінної використовуючи значення іншої змінної <code>(приклад змінних: let a = 10, let c = 15, можна написати c = c + a, після чого c = 25)</code> , даний запис можна використовувати в спрощеній формі <code>(приклад: let a = 10, let c = 15, c += a)</code> таким чином можна використовувати інші оператори <code> + - * / </code></li>
                         </ul>
+                    </div>
+                    <div class="oper_wrapp_list content_art">
+                        <div>
+                            <p class="oper_tit"> Оператори умови: </p>
+                            <ul>
+                                <li class="list_style_accord"><code> if (){} else </code></li>
+                                <li class="list_style_accord"><code> if (){} else if (){} else {}</code></li>
+                                <li> Приклад : <br> <code> let currYear = 2022 <br> if (currYear == 2022){ <br> alert('Так, рік вірний') <br> } else { <br> alert('Рік не відповідає поточному') <br> } </code></li>
+                                <li> Якщо в умові виокристовується boolean значення, то даний <br> запис можна скоротити, використовуючи тернарний вираз, приклад: <br><code> let isReady = false <br> isReady ? alert('Готово!') : alert('Не готово') </code></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="oper_tit">Оператори порівняння: </p>
+                            <ul>
+                                <li><code> > </code> суворо більше </li>
+                                <li><code> < </code> суворо менше </li>
+                                <li><code> >= </code> більше або дорівнює </li>
+                                <li><code> <= </code> меньше або дорівнює </li>
+                                <li><code> == </code> перевірка рівності без звірки типу змінної </li>
+                                <li><code> === </code> сувора перевірка враховуючи тип змінної </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="content_art">
                         <h3 class="sec_tit_txt_acord"> Типи даних </h3>
