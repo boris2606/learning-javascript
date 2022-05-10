@@ -37,7 +37,7 @@
                         <ul>
                             <li class="list_style_accord"> Оператори <code> + - * / </code> виконують дії згідно математичних обчислень </li>
                             <li class="list_style_accord"> При використанні оператора <code>++</code> до змінної <code>(прикад: year++)</code> буде виконано інкрементування, тобто збільшення значення змінної після зчитування <code>+1</code>, якщо використати перед змінною <code>(прикад: ++year)</code> буде виконано спочатку збільшення на <code>+1</code> потім зчитування</li>
-                            <li class="list_style_accord"> При використанні оператора <code>--</code> до змінної <code>(прикад: year--)</code> буде виконано інкрементування, тобто зменшення значення змінної після зчитування <code>-1</code>, якщо використати перед змінною <code>(прикад: --year)</code> буде виконано спочатку зменшення на <code>-1</code> потім зчитування</li>
+                            <li class="list_style_accord"> При використанні оператора <code>--</code> до змінної <code>(прикад: year--)</code> буде виконано декрементування, тобто зменшення значення змінної після зчитування <code>-1</code>, якщо використати перед змінною <code>(прикад: --year)</code> буде виконано спочатку зменшення на <code>-1</code> потім зчитування</li>
                             <li class="list_style_accord"> При перепризначення однієї змінної використовуючи значення іншої змінної <code>(приклад змінних: let a = 10, let c = 15, можна написати c = c + a, після чого c = 25)</code> , даний запис можна використовувати в спрощеній формі <code>(приклад: let a = 10, let c = 15, c += a)</code> таким чином можна використовувати інші оператори <code> + - * / </code></li>
                         </ul>
                     </div>
@@ -86,14 +86,40 @@
                     <div class="content_art">
                         <h3 class="sec_tit_txt_acord"> Функції </h3>
                         <ul>
-                            <p>Для перевірки типу даних змінної необхідно використовувати наступний запис <code>( приклад: console.log(typeof змінна); )</code>або <code> typeof змінна </code> в консолі</p>
-                            <li class="list_style_accord"><code>boolean</code> може приймати значення <code>true / false</code></li>
-                            <li class="list_style_accord"><code>string</code> текстове значення </li>
-                            <li class="list_style_accord"><code>number</code> числове значення </li>
-                            <li class="list_style_accord"><code>undefined</code> невизначене значення</li>
-                            <li class="list_style_accord"><code>null</code> відсутнє значення </li>
+                            <p>Значення команд:</p>
+                            <li class="list_style_accord"><code>return</code> - повернення значення з функції </li>
+                        </ul>
+                        <p>Приклад базової функції:<br> <code>function calculateAge(year){ <br> return 2022 - year<br> } <br> console.log(calculateAge(1992))</code></p>
+                        <p>Присутня можливість використання функції в середині функції, приклад: <br><code>let myAge = 1992 <code class="comment_code"> // Оголошення змінної року народження</code><br>let myName = "Борис" <code class="comment_code"> // Оголошення змінної ім'я</code><br><br>function calculateAge(year){<code class='comment_code'> // Функція обрахунку різниці років</code><br>return 2022 - year<br>}<br>function logInfoPerson(name,year) {<code class="comment_code">// Функція виводу ім'я та року народження</code><br>   let age = calculateAge(year)<br>if (age > 0){ <code class="comment_code"> // Перевірка року, чи він більше 0</code><br>console.log('Імя людини:' + name + ' Вік людини ' + ' ' + age);<br>    } else {<br>        alert('введіть коректний вік')<br>    }<br>}<br>logInfoPerson(myName,myAge); <code class="comment_code"> // Виклик функції з заданими параметрами myAge,myName</code><br></code></p>
+                    </div>
+                    <div class="content_art">
+                        <h3 class="sec_tit_txt_acord"> Масиви </h3>
+                        <p>Приклад запису масивів:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>let cars = ['audi','bmw','opel','honda'];</code><code class="comment_code">// Краще використовувати даний шлях запису</code></li>
+                            <li class="list_style_accord"><code>let cars = new Array('audi','bmw','opel','honda');</code><code class="comment_code">// Можливі проблеми з таким видом запису</code></li>
+                        </ul>
+                        <p>Присутня змога звернення до конкретного елементу масиву за індексом, приклад:<br><code>let cars = ['audi','bmw','opel','honda']; <br>console.log(cars[2]) <code class="comment_code">// В даному випадку виведе елемент opel, тобто 3 елемент. Всі елементи починаються з індексу [0] - це перший елемент </code></code></p>
+                        <p>Присутня змога зміни конкретного елементу масиву за індексом, приклад:<br><code>cars[0] = 'toyota' <br>console.log(cars) <code class="comment_code">// В даному випадку елемент toyota стане першим елементом масиву, замінивши попередній. Тобто cars = ['toyota','bmw','opel','honda'] </code></code></p>
+                        <p>Команди для роботи з масивами:</p>
+                        <p class="list_style_accord">Масив: <code>let cars = ['audi','bmw','opel','honda']</code></p>
+                        <ul>
+                            <li class="list_style_accord"><code>console.log(cars)</code> Перегляд масиву</li>
+                            <li class="list_style_accord"><code>console.log(cars[0])</code> Звернення до певного елементу масиву</li>
+                            <li class="list_style_accord"><code>console.log(cars.lenght)</code> Перегляд довжини масиву, кількість елементів</li>
+                            <li class="list_style_accord"><code>cars[cars.lenght] = 'Kia'</code> Додавання елементу в кінець масиву</li>
                         </ul>
                     </div>
+                    <div class="content_art">
+                        <h3 class="sec_tit_txt_acord"> Цикли </h3>
+                        <ul>
+                            <p>Приклади використання циклу з масивом: <br> Присутній масив <code>let cars = ['Audi','BMW','Opel','Honda']</code></p>
+                            <li class="list_style_accord"><code>for (let i = 0; i < cars.length; i++){ <code class="comment_code"> // Застарілий спосіб</code><br>console.log(cars[i]);<br>};</code></li>
+                            <li class="list_style_accord"><code>for (let car of cars) {<code class="comment_code"> // Новий спосіб, де car змінна являється елементом масиву cars. Такий метод називається "forof" </code><br>console.log(ppl);<br>}</code></li>
+
+                        </ul>
+                    </div>
+
 
                     
 
