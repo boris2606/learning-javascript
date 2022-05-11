@@ -10,7 +10,7 @@
     <body>
         <h1 class="tit_text_learn"> Для ознайомлення з JavaScript оберіть розділ </h1>
         <div class="accordion accordion-flush" id="accordionFlushExample">
-            <!-- Аккорд елемент -->
+            <!-- Аккорд елемент Основи JS-->
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed btn_accord_style" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -112,19 +112,127 @@
                     </div>
                     <div class="content_art">
                         <h3 class="sec_tit_txt_acord"> Цикли </h3>
+                        <p>Приклади використання циклу з масивом: <br> Присутній масив <code>let cars = ['Audi','BMW','Opel','Honda']</code></p>
                         <ul>
-                            <p>Приклади використання циклу з масивом: <br> Присутній масив <code>let cars = ['Audi','BMW','Opel','Honda']</code></p>
                             <li class="list_style_accord"><code>for (let i = 0; i < cars.length; i++){ <code class="comment_code"> // Застарілий спосіб</code><br>console.log(cars[i]);<br>};</code></li>
-                            <li class="list_style_accord"><code>for (let car of cars) {<code class="comment_code"> // Новий спосіб, де car змінна являється елементом масиву cars. Такий метод називається "forof" </code><br>console.log(ppl);<br>}</code></li>
-
+                            <li class="list_style_accord"><code>for (let car of cars) {<code class="comment_code"> // Новий спосіб, де car змінна являється елементом масиву cars. Такий метод називається "forof" </code><br>console.log(car);<br>}</code></li>
                         </ul>
                     </div>
-
-
-                    
-
+                    <div class="content_art">
+                        <h3 class="sec_tit_txt_acord"> Об'єкти </h3>
+                        <p>Приклад об'єкту: </p>
+                        <ul>
+                            <li class="list_style_accord"><code>let person = {<br>firstName: 'Boris',<br>secondName: 'Shagiev',<br>year: 1992<br>};</code></li>
+                        </ul>
+                        <p>Як ключ об'єкту може виступати масив, приклад:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>let person = {<br>firstName: 'Boris',<br>secondName: 'Shagiev',<br>year: 1992,<br>languages: ['Uk','Ru','En'],<br>};</code></li>
+                        </ul>
+                        <p>Також можна в якості ключа використовувати boolean значення:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>let person = {<br>firstName: 'Boris',<br>secondName: 'Shagiev',<br>year: 1992,<br>languages: ['Uk','Ru','En'],<br>hasWife: true,<br>};</code></li>
+                        </ul>
+                        <p>Для звернення до певного ключа об'єкту необхідно використовувати наступний вид запису: <code>console.log(person.firstName)</code> в даному випадку буде отримано значення ключа firstName об'єкту person </p>
+                        <p>В об'єкті є змога використовувати функцію: <br><code>let person = {<br> firstName: 'Boris',<br> someFunc: function(){<br> console.log(someFunc)<br>} </code></p>
+                        <p>Методи звернення до об'єкту:</p>
+                        <ul>
+                            <li class="list_style_accord"><code> console.log(person.firstName)</code></li>
+                            <li class="list_style_accord"><code> console.log(person['firstName'])</code></li>
+                            <li class="list_style_accord"><code> let key = 'year' <code class="comment_code"> // При призначенні змінній ключа об'єкту, ключ обов'язково повинен бути написаний текстовим типом в скобках :' '</code> <br> console.log(person[key])</code><code class="comment_code">// Можна призначити змінну по назві ключа, та зробити звернення по цій змінні до об'єкту. В результаті чого, буде отримано значення ключа year об'єкту person, що дорівнює 1992</code></li>
+                        </ul>
+                        <p>Присутня змога зміни значення ключа, приклад: <br> <code>person.firstName = 'Sergey'</code> після чого ключ firstName об'єкту person буде змінено на Sergey</p>
+                        <p>Присутня змога додавання ключів в об'єкт, приклад: <br> <code>person.isProgrammer = true,</code> після чого буде добавлено ключ isProgrammer в об'єкт person. Головне щоб даного ключа не було в об'єкті, якщо він буде присутній, то значення просто зміниться</p>
+                    </div>
                 </article>
               </div>
             </div>
+            <!-- Аккорд елемент Числа + BigInt -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button class="accordion-button collapsed btn_accord_style" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <p class="header_name_item_stl">Числа + <span class="fix_upper"> BigInt </span></p>
+                  </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                  <article class="accordion-body">
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Числа - Number </p>
+                        <p>Числа можуть бути двох типів:</p>
+                        <ul>
+                            <li class="list_style_accord"> <code>let numInteger  = 42</code> - integer число(ціле)</li>
+                            <li class="list_style_accord"> <code>let numFloat = 42.35</code> - float число(не ціле число)</li>
+                            <li class="list_style_accord"> <code>let numPow = 10e3 </code> - pow число (в даному випадку 10 в 3 степені, по результату дорівню 10000)</li>
+                            <li class="list_style_accord"> <code>let notNum  = NaN</code> - Not A Number - при використанні typeof рахується числом</li>
+                        </ul>
+                        <p>Для приведення числа в <code>NaN</code> необхідно виконати ділення на <code>undefined</code> приклад: <br> <code>let num = 2 / undefined</code></p>
+                        <p>Для перевірки чи число являється <code>NaN</code> можна наступним чином, приклад :<br> <code>let weird = 2 / undefined<br>console.log(isNaN(weird))</code><code class="comment_code">// В даному випадку результатом буде true, так як результат ділення на undefined буде NaN</code></p>
+                        <p>Для приведення рядка в число з integer(цілим) значенням необхідно використати команду <code>parseInt</code> приклад:<br> <code>let strNumInteger = '42'<br>let num = parseInt(strNumInteger)</code> після чого num буде цілим числом </p>
+                        <p>Для приведення рядка в число з float(число з сотими 42.42) значенням необхідно використати команду <code>parseFloat</code> приклад:<br> <code> let strNumFloat = '42.42'<br> let numFloat = parseFloat(strNumFloat) </code> </p>
+                        <p>Методи приведення string змінної в число:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>let strNumFloat = '42' <br> let numFloat = pareseFloat(strNumFloat)</code> <code class="comment_code"> // Для чисел з сотими приклад: 42.42</code> </li>
+                            <li class="list_style_accord"><code>let strNumInteger = '42' <br> let numInteger = pareseInt(strNumInteger)</code> </li>
+                            <li class="list_style_accord"><code>let strNumInteger = '42' <br> let numInteger = Number(strNumInteger)</code><code class="comment_code">// Доступне використання з float числами , приклад 42.42</code></li>
+                            <li class="list_style_accord"><code>let strNumInteger = '42' <br> let numInteger = +strNumInteger</code><code class="comment_code">// Доступне використання з float числами , приклад 42.42</code></li>
+                        </ul>
+                        <p>Для обмеження кількості знаків в числі після "." необхідно використати команду <code>toFixed(число, скільки потрібно після .)</code> але після використання його число буде з типом <code>string</code>. для коректного використання неоюхідно перевести результат в <code>number</code> необхідно використати команду <code>parseInt / parseFloat або оператор '+'(відповідно чи число integer чи float)</code>, приклад: <br> <code>let a = 0.4 <br> let b = 0.2 <br> let sumStr = a + b <br> let sumNumber = +sumStr.toFixed(3) </code> <code class="comment_code">// В даному випадку приводимо змінну в number за допомогою "+", та вказуємо що після "." необхідно відображати лише 3 знаки за допомогою toFixed(3)</code></p>
+                    </div>
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Тип даних - <span class="fix_upper"> BigInt </span></p>
+                        <p>BigInt - тип даних, який використовується для роботи з числами більшими за MAX_SAFE_INTEGER. <code> console.log(Number.MAX_SAFE_INTEGER) буде дорівнювати 9007199254740991</code> </p>
+                        <p>Для приведення числа в тип BigInt необхідно в кінці великого числа дописати <code>n</code>, приклад: <br><code> console.log(99999999999999999999999999999n)</code></p>
+                        <p>BigInt має змогу оперувати лише з значеннями такого самого типу, та працює лише з значенняти integer. З числом в якого є десяткові значення НЕ ПРАЦЮЄ!</p>
+                    </div>
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Об'єк - Math</p>
+                        <p>Об'єкт <code>Math</code> дозволяє працювати з різними математичними операціями </p>
+                        <p>Константи даного об'єкту:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>Math.E</code> - експонента, приклад: <code>console.log(Math.E)</code> яка рівна 2.718281828459045 </li>
+                            <li class="list_style_accord"><code>Math.PI</code> - число ПІ, приклад: <code>console.log(Math.PI)</code>  яка рівна 3.141592653589793</li>
+                        </ul>
+                        <p>Методи об'єкту <code>Math</code>:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>console.log(Math.sqrt(25))</code> - Квадратний корінь з числа</li>
+                            <li class="list_style_accord"><code>console.log(Math.pow(5,2))</code> - Піднесення 5 до степіні 2</li>
+                            <li class="list_style_accord"><code>console.log(Math.abs(-42))</code> - Модуль числа -42 </li>
+                            <li class="list_style_accord"><code>console.log(Math.max(3,12,41,42,18))</code> - Виявлення максимального числа зі списку які передаємо, в цьому прикладі 42  </li>
+                            <li class="list_style_accord"><code>console.log(Math.min(3,12,41,42,18))</code> - Виявлення мінімального числа зі списку які передаємо, в цьому прикладі 3 </li>
+                            <li class="list_style_accord"><code>console.log(Math.floor(4.9))</code> - Округлення до меншого , в результаті прикладу буде 4</li>
+                            <li class="list_style_accord"><code>console.log(Math.ceil(4.3))</code> - Округлення до більшого , в результаті буде 5</li>
+                            <li class="list_style_accord"><code>console.log(Math.round(4.6))</code> - Округлення до найближчого цілого, в даному прикладі 5</li>
+                            <li class="list_style_accord"><code>console.log(Math.trunc(1.634))</code> - Відкидає десяті, в результаті отримаємо в даному прикладі 1</li>
+                            <li class="list_style_accord"><code>console.log(Math.random())</code> - Значення не передається, автоматично генерує випадкове число</li>
+                        </ul>
+                        <p>Приклад функції , яка буде генерувати автоматично та повертати випадкове число в діапазоні двух цілих чисел які буде вказано: <br><code> function randomNumber (min, max){<br>return  Math.round(Math.random() * (max - min +1) + min)<br>}<br>let num = randomNumber(1,100)<br>console.log(num)</code></p>
+                    </div>
+
+
+                  </article>
+                </div>
+            </div>
+            <!-- Приклад розділу стилізованого -->
+            <!-- <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed btn_accord_style" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <p class="header_name_item_stl">Числа + BigInt</p>
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <article class="accordion-body">
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Змінні </p>
+                        <p>Всі змінні бажано вказувати в стилі "camelCase" (приклад: <code> let firstName = 'Ivan' </code>)</p>
+                        <ul>
+                            <li class="list_style_accord"> <code>var year = 2022</code> - Оголошення змінної з можливісттю подальшого її перезапису (метод оголошення застарівший)</li>
+                            <li class="list_style_accord"> <code>const myCountry = 'Ukraine'</code> - Змінні такого типу присутні лише для читання, перезапис даної змінної недоступний (бажано використовувати якщо змінна являється незмінною)</li>
+                            <li class="list_style_accord"> <code>let centry = 21 </code> - Актуальна форма оголошення змінної, доступна для перезапису</li>
+                        </ul>
+                    </div>
+
+                  </article>
+                </div>
+            </div> -->
+
     </body>
 </html>

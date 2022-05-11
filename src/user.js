@@ -1,9 +1,5 @@
-let cars = ['Audi','BMW','Opel','Honda']
-
-for (let i = 0; i < cars.length; i++){
-    console.log(cars[i]);
-};
-
-for (let ppl of cars) {
-    console.log(ppl);
+function randomNumber (min, max){
+    return  Math.round(Math.random() * (max - min +1) + min)
 }
+let num = randomNumber(1,100)
+console.log(num)
