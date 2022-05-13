@@ -210,7 +210,48 @@
 
                   </article>
                 </div>
+                
             </div>
+            <!-- Рядки -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed btn_accord_style" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <p class="header_name_item_stl">Рядки - string</p>
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                  <article class="accordion-body">
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Рядки </p>
+                        <p>В рядку(string) можна використовувати змінні декількома шляхами приклад: <code>let name = 'Борис' <br> let age = 30</code></p>
+                        <ul>
+                            <li class="list_style_accord"> <code>let someText = 'Привіт, мене звати ' + name + ' мій вік ' + age </code><code class="comment_code">// В даному випадку легко запутатись</code> </li>
+                            <li class="list_style_accord"> <code>let someText = `Привіт, мене звати ${name} мій вік ${age}`</code><code class="comment_code">// Це варіант запису являється простішим для сприймання і в <code>${..}</code> можна передавати не лише змінні а і функції, і тернарні вирази. Обов'язковою умовою є використання кавичок з нахилом<code> ` ` </code></code></li>
+                            <li class="list_style_accord"> <code>let someText = `Привіт, мене звати ${name} мій вік ${age} ${age > 18 ? alert('Ти повнолітній') : alert('Ще молодий')}`</code><code class="comment_code">// Приклад використання тернарного виразу в рядку</code></li>
+                        </ul>
+                    </div>
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Методи роботи з рядками </p>
+                        <p>Приклад методів для роботи з рядками.Для прикладу присутня змінна <code> let myName = 'Борис' </code></p>
+                        <ul>
+                            <li class="list_style_accord"> <code>console.log(myName.lenght)</code> Перевірка кількості символів в змінній</li>
+                            <li class="list_style_accord"> <code>console.log(myName.toUpperCase())</code> Приведення всіх символів до верхнього регістру</li>
+                            <li class="list_style_accord"> <code>console.log(myName.toLowerCase())</code> Приведення всіх символів до нижнього регістру</li>
+                            <li class="list_style_accord"> <code>console.log(myName.charAt(2))</code> Перевірка який символ знаходиться на індексі 2, перший символ починається з 0 індексу</li>
+                            <li class="list_style_accord"> <code>console.log(myName.indexOf('ис'))</code> Перевірка чи в строці є підстрока з символами "ис", буде показано з якого индексу починається підстрока. Якщо підстрока відсутня в змінній то буде повернуто значення -1</li>
+                            <li class="list_style_accord"> <code>console.log(myName.startsWith('Бо'))</code> Перевірка чи рядок починається з "Бо". вертає значення true/false. Метод чутливий до регістру "Бо" "бо"</li>
+                            <li class="list_style_accord"> <code>console.log(myName.endsWith('ис'))</code> Перевірка чи рядок закінчується на "ис". вкртає значення true/false. </li>
+                            <li class="list_style_accord"> <code>console.log(myName.repeat(3))</code> Вказуємо скільки разів повторити рядок, в даному випадку 3</li>
+                            <li class="list_style_accord"> <code>console.log(myName.trim())</code> Видаляє всі пробіли в змінній</li>
+                            <li class="list_style_accord"> <code>console.log(myName.trimLeft())</code> Видалення пробілів зліва</li>
+                            <li class="list_style_accord"> <code>console.log(myName.trimRight())</code> Видалення пробілів справа</li>
+                        </ul>
+                    </div>
+
+                  </article>
+                </div>
+            </div>
+
             <!-- Приклад розділу стилізованого -->
             <!-- <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
