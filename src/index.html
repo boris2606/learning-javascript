@@ -279,9 +279,32 @@
                     </div>
                     <div class="content_art">
                         <p class="sec_tit_txt_acord"> Стрілочні функції </p>
-                        <p> Анонімними функції - це функції які без назви</p>
-                        <p>Приклад: <br> <code>setInterval( function { <code class="comment_code"> // setInterval - метод JS який дозволяє виконати функцію через певний час</code> <br> console.log('Hellow world')<br> },1000) <code class="comment_code">// час через який запрацює функція</code>  </code></p>
+                        <p>Приклад стрілочної функції:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>function person(name){ <code class="comment_code">// Приклад звичайної функції</code><br> console.log('Привіт - ', name) <br>}<br> </code> </li>
+                            <li class="list_style_accord"><code>let arrow = (name) => { <code class="comment_code">// Приклад стрілочної функції, де name параметр</code><br> console.log('Привіт - ',name)<br>}<br></code></li>
+                            <li class="list_style_accord"><code>let arrow = name => console.log('Привіт - ',name)<br></code> <code class="comment_code">// Скорочений приклад стрілочної функції, де name параметр, його можна не брати в дужки так як параметр тільки 1, також у фігурні дужки не берем умову, у зв'язку з тим що умова у вигляді однієї стрічки</code></li>
+                        </ul>
+                        <p>Усі ці функції рівнозначні, мають лише різний запис. Якщо до функції не передаються параметри, дужки писати потрібно обов'язково</p>
                     </div>
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Параметри за замовчуванням </p>
+                        <p>Приклад функції з параметрами за замовчуванням:</p>
+                        <ul>
+                            <li class="list_style_accord"><code> let somFunc = (a = 1,b = 1) => a + b <br> console.log(someFunc(40,51))</code> <code class="comment_code"> // В Даному випадку присутня стрілочна функція, значення параметрів якої за замовчуванням 1, але якщо при викликук функції буде вказано інші параметри, для прикладу 40 та 51 то вони будуть пріорітетом для прийняття як параметр</code></li>
+                            <li class="list_style_accord"><code> function sumAll(...all){<br>console.log(all)<br>}<br> sumAll(1,2,3,4,5,6,7)</code> <code class="comment_code"> // Для прийняття безлічі значень використовується "...all" - оператор rest. В даному випадку всі значення які будуть передані вони будуть сформовані в масив</code></li>
+                            <li class="list_style_accord"><code> function sumAll(...all){<code class="comment_code">// Приклад функції яка додає усі прийняті параметри, вони можуть бути збільшені або зменшені</code> <br>let result = 0<br>for (let num of all){<br>result += num<br>}<br>return result<br>}<br>let sumRes = sumAll(1,2,3,4,5,6,7)<br>console.log(sumRes)</code><br> В даному випадку буде результатом загальне значення параметрів які були передані в sumAll</li>
+                        </ul>
+                    </div>
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Замикання </p>
+                        <p> Замиканням можна назвати явище коли ми з одниєї функції вертаємо іншу функцію, після буде виконано збереження певного контексту</p>
+                        <ul>
+                            <li class="list_style_accrod"><code>function createMember(name){<br>&nbsp&nbsp return function(lastName){<br>&nbsp&nbsp&nbsp console.log(name + ' ' + lastName)<br>&nbsp&nbsp}<br>}<br><br> let logWithLastName = createMember('Борис')<br>console.log(logWithLastName('Іванов')) </code></li>
+                        </ul>
+                        <p>В даному випадку logWithLastName ми вже присвоїли параметр name функції createMember. Тобто вже напряму при виклику функції через змінну logWithLastName можна вказати параметр lastName</p>
+                    </div>
+
 
                   </article>
                 </div>
