@@ -317,12 +317,17 @@
                 <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
                   <article class="accordion-body">
                     <div class="content_art">
-                        <p class="sec_tit_txt_acord"> Змінні </p>
-                        <p>Всі змінні бажано вказувати в стилі "camelCase" (приклад: <code> let firstName = 'Ivan' </code>)</p>
+                        <p class="sec_tit_txt_acord"> Основи </p>
+                        <p>Масиви - певна структура даних яка містить в собі певі елементи. Приклад масиву: <code>let cars = ['BMW','Honda','Mazda',3,6,7]</code> Всі елементи знаходяться під певним індексом та перший елемент є з індексом 0</p>
+                        <p>Методи роботи з масивами</p>
                         <ul>
-                            <li class="list_style_accord"> <code>var year = 2022</code> - Оголошення змінної з можливісттю подальшого її перезапису (метод оголошення застарівший)</li>
-                            <li class="list_style_accord"> <code>const myCountry = 'Ukraine'</code> - Змінні такого типу присутні лише для читання, перезапис даної змінної недоступний (бажано використовувати якщо змінна являється незмінною)</li>
-                            <li class="list_style_accord"> <code>let centry = 21 </code> - Актуальна форма оголошення змінної, доступна для перезапису</li>
+                            <li class="list_style_accord"> <code>cars.push('Opel')</code> - Додавання елементу в кінець масиву</li>
+                            <li class="list_style_accord"> <code>cars.unshift('Kia')</code> - Додавання елементу в початок масиву</li>
+                            <li class="list_style_accord"> <code>cars.shift()</code> - Видалення елементу з початку масива, та повертає значення даного елементу (Тобто при видаленні елементу можна його призначити до змінної)</li>
+                            <li class="list_style_accord"> <code>cars.pop()</code> - Видалення елементу з кінця масива, та повертає значення даного елементу (Тобто при видаленні елементу можна його призначити до змінної)</li>
+                            <li class="list_style_accord"> <code>cars.reverse()</code> - Перевертає масив</li>
+                            <li class="list_style_accord"> <code>text.split('')</code> - Приведення стрічки <code>(Приклад: let text = 'Привіт, мене звати Борис'</code> в масив, де <code>split(' ')</code> - в лапках необхідно вказати символ по яким буде розділено на елементи масиву, якщо це буде пробіл, то кожен елемент по наявному пробілу буде розбито. Якщо буде пусто то кожен символ буде як елемент масиву </li>
+                            <li class="list_style_accord"> <code>cars.indexOf('BMW')</code> - отримання индецсу елементу масиву</i>
                         </ul>
                     </div>
 
