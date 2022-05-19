@@ -319,7 +319,7 @@
                     <div class="content_art">
                         <p class="sec_tit_txt_acord"> Основи </p>
                         <p>Масиви - певна структура даних яка містить в собі певі елементи. Приклад масиву: <code>let cars = ['BMW','Honda','Mazda',3,6,7]</code> Всі елементи знаходяться під певним індексом та перший елемент є з індексом 0</p>
-                        <p>Методи роботи з масивами</p>
+                        <p>Методи роботи з масивами: </p>
                         <ul>
                             <li class="list_style_accord"> <code>cars.push('Opel')</code> - Додавання елементу в кінець масиву</li>
                             <li class="list_style_accord"> <code>cars.unshift('Kia')</code> - Додавання елементу в початок масиву</li>
@@ -327,9 +327,30 @@
                             <li class="list_style_accord"> <code>cars.pop()</code> - Видалення елементу з кінця масива, та повертає значення даного елементу (Тобто при видаленні елементу можна його призначити до змінної)</li>
                             <li class="list_style_accord"> <code>cars.reverse()</code> - Перевертає масив</li>
                             <li class="list_style_accord"> <code>text.split('')</code> - Приведення стрічки <code>(Приклад: let text = 'Привіт, мене звати Борис'</code> в масив, де <code>split(' ')</code> - в лапках необхідно вказати символ по яким буде розділено на елементи масиву, якщо це буде пробіл, то кожен елемент по наявному пробілу буде розбито. Якщо буде пусто то кожен символ буде як елемент масиву </li>
-                            <li class="list_style_accord"> <code>cars.indexOf('BMW')</code> - отримання индецсу елементу масиву</i>
+                            <li class="list_style_accord"> <code>cars.indexOf('BMW')</code> - отримання индексу елементу масиву</i>
+                            <li class="list_style_accord"> <code>cars.includes('BMW')</code> - Перевірка находження елементу в масиві. Вертає значення <code>true/false</code></i>
+                            <li class="list_style_accord"> <code>people.findIndex(function(){})</code> - Пошук індексу об'єкту в масиві. Працює лише з використанням функції, приклад використаня в "Приклади"</li>
+                            <li class="list_style_accord"> <code>people.find(function(){})</code> - Пошук об'єкту в масиві. Працює лише з використанням функції, приклад використаня в "Приклади" </i>
+                        </ul>
+                        <p>Приклади:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>let cars = ['Honda','BMW','Nissan']<br>let newCar = cars.indexOf('BMW')<br>cars[newCar] = 'Opel'<br></code>Пошук елементу в масиві, та заміна його на певний елемент. Чудово працює з примітивними типами даних</li>
+                            <li class="list_style_accord"><code>let people = [<code class="comment_code"> // ПРИКЛАД №1 - ПОШУК ІНДЕКСУ ОБ'ЄКТУ В МАСИВІ, ВИКОРИСТОВУЮЧИ МЕТОД "findIndex"</code> <br>&nbsp{name: 'Elena', budget: 3900},<br>&nbsp{name: 'Boris', budget: 4600},<br>&nbsp{name: 'Victoria', budget: 2800}<br>]<br><br>let index = people.findIndex(function(person){<br>&nbsp return person.budget === 4600<br>})<br>console.log(people[index])</code><br> В даному прикладі присутній масив з об'єктами <code>people</code>. Для пошуку індексу об'єкту використовується метод <code>findIndex()</code> з функцією в середині <code>( так як даний метод виконує дію циклу )</code>, яка приймає значення в собі <code>person</code>. Результатом функції є повернення значення з неї особи , яка має ключ об'єкту <code>budget</code>, що дорівнює вказаному </li>
+                            <li class="list_style_accord"><code>let people = [<code class="comment_code"> // ПРИКЛАД №2 - ПОШУК ОБ'ЄКТУ В МАСИВІ ВИКОРИСТОВУЮЧИ МЕТОД "find"</code> <br>&nbsp{name: 'Elena', budget: 3900},<br>&nbsp{name: 'Boris', budget: 4600},<br>&nbsp{name: 'Victoria', budget: 2800}<br>]<br><br>let person = people.find(function(person){<br>&nbsp return person.budget === 4600<br>})<br>console.log(people)</code><br>Якщо необхідно знайти людину з масиву (або об'єкт з масиву напряму), можна використати метод <code>find()</code> з функцією в середині. Даний метод виконує дію циклу,яка приймає значення в собі <code>person</code>. Результатом функції є повернення значення з неї особи , яка має ключ об'єкту <code>budget</code>, що дорівнює вказаному  </li>
+                            <li class="list_style_accord"><code>let people = people.find( person => person.budget === 3900) <br> console.log(people)</code> <br> Приклад скороченого запису функції <code>ПРИКЛАДУ №2</code> використовуючи стрілочну функцію</li>
                         </ul>
                     </div>
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Методи високого порядку </p>
+                        <p> Для прикладу буде використовуватись наступний масив :<code> let cars = ['BMW','Honda','Mazda']</code> </p>
+                        <p> Методи високого порядку</p>
+                        <ul>
+                            <li class="list_style_accord"><code>cars.map(function(){})</code> Приймає в себе функцію. Метод <code>map()</code> ЗАВЖДИ ПРИЙМАЄ В СЕБЕ НОВИЙ МАСИВ!!! <br> Приклад, використовуючи стрілочну функцію: <br> <code>let upperCaseCars = cars.map(car => car.toUpperCase())</code> </li>
+                            <li class="list_style_accord"><code></code></li>
+                            <li class="list_style_accord"><code></code></li>
+                        </ul>
+                    </div>
+
 
                   </article>
                 </div>
