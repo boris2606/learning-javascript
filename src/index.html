@@ -353,11 +353,27 @@
                         <p><code> let people = [<br>&nbsp{name: 'Elena', budget: 3900},<br>&nbsp{name: 'Boris', budget: 4600},<br>&nbsp{name: 'Victoria', budget: 2800} <br>]<br><br>let allBudget = people.filter(person => person.budget > 3000).reduce((acc, person) => { <br>&nbsp acc += person.bunget<br>&nbsp return acc <br>} , 0)</code></p>
                         <p>В даному прикладі у нас є масив з людьми. Необхідно знайти всіх людей з бюджетом більше 3000, та додати ці бюджети. Для виконнання даної задачі буде використовуватись 2 методи <code> filter(function (){})</code> (за допомогою якого буде відфільтровано людей у яких бюджет більший за 3000) та <code>reduce(function(acc , person){}, value)</code>, де <code>value</code> це початкове значення (Для поєднання відфільтрованих значень масиву) В методі <code>reduce</code> в ролі <code>acc</code> виступає "акумулятор" </p>
                     </div>
-
-
                   </article>
                 </div>
             </div> 
+            <!-- Об'єкти -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSix">
+                  <button class="accordion-button collapsed btn_accord_style" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                    <p class="header_name_item_stl">Об'єкти</p>
+                  </button>
+                </h2>
+                <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                  <article class="accordion-body">
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Змінні </p>
+                        <p>Всі змінні бажано вказувати в стилі "camelCase" (приклад: <code> let firstName = 'Ivan' </code>)</p>
+                    </div>
+
+                  </article>
+                </div>
+            </div>
+
             <!-- Приклад розділу стилізованого -->
             <!-- <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
