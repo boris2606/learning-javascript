@@ -345,10 +345,13 @@
                         <p> Для прикладу буде використовуватись наступний масив :<code> let cars = ['BMW','Honda','Mazda']</code> </p>
                         <p> Методи високого порядку</p>
                         <ul>
-                            <li class="list_style_accord"><code>cars.map(function(){})</code> Приймає в себе функцію. Метод <code>map()</code> ЗАВЖДИ ПРИЙМАЄ В СЕБЕ НОВИЙ МАСИВ!!! <br> Приклад, використовуючи стрілочну функцію: <br> <code>let upperCaseCars = cars.map(car => car.toUpperCase())</code> </li>
-                            <li class="list_style_accord"><code></code></li>
-                            <li class="list_style_accord"><code></code></li>
+                            <li class="list_style_accord"><code>cars.map(function(){})</code> Приймає в себе функцію. Метод <code>map()</code> перетворює дані масиву. ЗАВЖДИ ПРИЙМАЄ В СЕБЕ НОВИЙ МАСИВ!!! <br> Приклад, використовуючи стрілочну функцію: <br> <code>let upperCaseCars = cars.map(car => car.toUpperCase())</code> </li>
+                            <li class="list_style_accord"><code>let numbers = [1,2,3,5,10,15]<br> let filtredNumbers = numbers.filter( num => num > 5 )</code><br>Приклад використовуючи стрілочну функцію: <br> Фільтрування масиву, вибираючи всі числа з нього які БІЛЬШе 5, та повертає новий масив значень лише тих які більше 5 </li>
+                            <li class="list_style_accord"><code>people.reduce(function (){}, 2000)</code>Поєднання всіх значень масиву в одне. Приймає в себе 2 значення: 1 - функція, 2 - початкове значення</li>
                         </ul>
+                        <p>Приклад використання методу <code> reduce( function(){}, value ) </code>використовуючи стрілочну функцію:</p>
+                        <p><code> let people = [<br>&nbsp{name: 'Elena', budget: 3900},<br>&nbsp{name: 'Boris', budget: 4600},<br>&nbsp{name: 'Victoria', budget: 2800} <br>]<br><br>let allBudget = people.filter(person => person.budget > 3000).reduce((acc, person) => { <br>&nbsp acc += person.bunget<br>&nbsp return acc <br>} , 0)</code></p>
+                        <p>В даному прикладі у нас є масив з людьми. Необхідно знайти всіх людей з бюджетом більше 3000, та додати ці бюджети. Для виконнання даної задачі буде використовуватись 2 методи <code> filter(function (){})</code> (за допомогою якого буде відфільтровано людей у яких бюджет більший за 3000) та <code>reduce(function(acc , person){}, value)</code>, де <code>value</code> це початкове значення (Для поєднання відфільтрованих значень масиву) В методі <code>reduce</code> в ролі <code>acc</code> виступає "акумулятор" </p>
                     </div>
 
 
