@@ -3,7 +3,13 @@ let person = {
     age: 29,
     isProgrammer: true,
     languages:['UK','EN','RU'],
-    greet: function(){
+    greet(){
         console.log(`Hellow mr.${person.name}`);
+    },
+}
+for (let key in person) {
+    if(person[key] === 29){
+        console.log(key + ' ' + person[key])
+        console.log(person.greet())
     }
 }

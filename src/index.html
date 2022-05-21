@@ -376,11 +376,58 @@
                                 languages:['UK','EN','RU'],<br>&nbsp
                                 greet: function(){<br>&nbsp&nbsp
                                     console.log(`Hellow mr.${person.name}`);<br>&nbsp
+                                },<br>
+                            }<br>
+                            </code>
+                        </p>
+                        <p>Функцію, як ключ об'єкту можна писати скорочено, приклад:</p>
+                        <p><code>
+                            greet(){<br>&nbsp&nbsp
+                                console.log(`Hellow mr.${person.name}`);<br>&nbsp
+                            },<br>
+                        </code></p>
+                        <p>Методи які використовуються для звернення до ключів об'єкту:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>person.name</code> - Звернення до ключа name</li>
+                            <li class="list_style_accord"><code>person.['age']</code> - Звернення до ключа age</li>
+                            <li class="list_style_accord"><code>person.greet()</code> - Виклик функції з об'єкту</li>
+                            <li class="list_style_accord"><code>delete person.age</code> - Видалення ключа age з об'єкту</li>
+                        </ul>
+                    </div>
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Новий синтаксис для роботи з о'єктами </p>
+                        <p>Приклад деструктуризації:</p>
+                        <p><code> let name = person.name <br> let age = person.age</code></p>
+                        <p>Для уникання дублювання, можна використати наступний запис, який створить змінні з об'єкту person <br><code>let {name , age} = person</code> <br> Якщо назва змінної буде відрізнятись від назви ключа, то можна це зробити наступним чином:<br> <code> let {name: personName, age: personAge} = person</code></p>
+                    </div>
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Реалізація ітерації об'єкту</p>
+                        <p>Присутні декілька можливостей зробити ітерацію об'єкту:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>
+                                for (let ket in person){<br>
+
+                                }
+                            </code> Можливість використання<code> forIn</code> при чому <code>key</code> буде приймати в себе НАЗВУ КЛЮЧА. <br> Для звернення до значення ключа необхідно використовувати наступний запис <code>person[key]</code>. Цикл forIn є небезпечним, так як він має доступ не лише до ключів об'єкту, він також може мати доступ до його <code>Прототипу</code></li>
+                        </ul>
+                        <p>Для уникання проблем з прототипом об'єкту при проходжені циклом <code>foreIn</code> необхідно в нього включати наступну перевірку: </p>
+                        <p><code>
+                            for (let key in person){<br>&nbsp;
+                                if (person.hasOwnProperty(key)){<br>&nbsp&nbsp
+                                    // Тут вже пишемо необхідний нам код<br>&nbsp;
                                 }<br>
                             }<br>
-                        </code>
-                        </p>
+                        </code></p>
+                        <p>Більш безпечний спосіб проходження по об'єкту є наступний:</p>
+                        <p><code>
+                            let keys = Object.keys(person) <code class="comment_code"> // Метод Object.keys, отримує ключі об'єкту у вигляді масиву</code><br>
+                            keys.forEach( (key) => { <code class="comment_code"> // Цикл forEach робить ітерацію по масиву де key це callback функція. key приймає в себе кожен ітеруємий елемент </code><br>&nbsp
+                                Тут пишем необхідний код <br>
+                            })<br>
+                        </code></p>
                     </div>
+
+
 
                   </article>
                 </div>
