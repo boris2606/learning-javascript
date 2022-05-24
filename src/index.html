@@ -425,14 +425,130 @@
                                 Тут пишем необхідний код <br>
                             })<br>
                         </code></p>
+                        <p>Так як Object.keys(person) вертає новий масив можна скоротити даний запис:</p>
+                        <p><code>
+                            Object.keys(person).forEach( (key) => { <br>&nbsp
+                                Тут пишем необхідний код <br>
+                            })<br>
+                        </code></p>                       
+                    </div>
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Контекст (Context) </p>
+                        <p> Ключове слово <code>this</code></p>
+                        <p> Приклад використання його в об'єкті:</p>
+                        <p> <code>let person = { <br>
+                            &nbsp;name:'Boris',<br>
+                            &nbsp;age: 29,<br>
+                            &nbsp;info(){<br>
+                            &nbsp;console.log('Привіт , мене звати:', this.name)<br>&nbsp;}<br>
+                            }
+                        </code> 
+                        </p>
+                        <p>Ключове слово <code>this</code> в контексті об'єкту буде вказувати на назву об'єкту, що дозволяє звернутись до ключа не старим способом <code>person.name</code> а використовуючи більш універсальний спосіб <code>this.name</code></p>
+                        <p>Присутні наступні методи:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>bind()</code> При'вязує контекст який ми обираємо самостійно, він повертає нову функцію, тому при використанні його потрібно присвоювати змінну.<br> Приклад використання: <br> 
+                                <code>
+                                let logger = {<br>&nbsp;
+                                    keysLog(){<br>&nbsp;&nbsp;
+                                        Object.keys(this).forEach( key => {<br>&nbsp;&nbsp;&nbsp;
+                                            console.log(` ${key} : ${this[key]}`)<br>&nbsp;&nbsp;
+                                        })<br>&nbsp;
+                                    }<br>
+                                }<br>
+                                let bound = logger.keysLog.bind(назва об'єкту)<br>
+                                bound()<br>
+                                </code>
+                                В даному випадку <code>bound</code> вже являється функцією. Так як метод <code>bind</code> повертає функцію. Таким чином можна буде викликати її коли буде необхідно
+                            </li>
+                            <li class="list_style_accord"><code>call()</code> Подібний до методу <code>bind()</code> але він виконує свою дію, та одразу її викликає. Приклад використання: <br>
+                                <code>
+                                    let logger = {<br>&nbsp;
+                                        keysLog(){<br>&nbsp;&nbsp;
+                                            Object.keys(this).forEach( key => {<br>&nbsp;&nbsp;&nbsp;
+                                                console.log(` ${key} : ${this[key]}`)<br>&nbsp;&nbsp;
+                                            })<br>&nbsp;
+                                        }<br>
+                                    }<br>
+                                    logger.keysLog.call(назва об'єкту)<br>
+                                </code>
+                            </li>
+                        </ul>
                     </div>
 
+                  </article>
+                </div>
+            </div>
+            <!-- Асинхронність -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingSeven">
+                  <button class="accordion-button collapsed btn_accord_style" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                    <p class="header_name_item_stl">Асинхронність</p>
+                  </button>
+                </h2>
+                <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+                  <article class="accordion-body">
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Основи </p>
+                        <p>Методи планування:</p>
+                        <ul>
+                            <li class="list_style_accord"><code>setIntervar( func|code , interval )</code> Буде виконано певну функцію чи код кожний інтервал часу. <br> Приклад: <br>
+                                <code>
+                                let interval = setInterval( () => {<br>&nbsp;
+                                    console.log('Hellow')<br>
+                                }, 1000)</code><br>
+                                В даному випадку дана функція буде спрацьовувати кожну секунду<br><br>
+                                Очищення <code> clearInterval(змінна якій присвоїна функція interval)</code>. Якщо застосоване очищення, тоді не буде здійснене виконання
+                            </li>
+                            <li class="list_style_accord"><code>setTimeout( func|code , timer )</code> Буде виконано певну функцію чи код по заввершенні часу <br> Приклад: <br>
+                                <code>
+                                let timeout = setTimeout( () => {<br>&nbsp;
+                                    console.log('Hellow')<br>
+                                },3000)</code><br>
+                                В даному випадку дана функція буде спрацьована по завершенню 3-ох секунд<br><br>
+                                Очищення <code> clearTimeout(змінна якій присвоїна функція timeout)</code>. Якщо застосоване очищення, тоді не буде здійснене виконання
+                            </li>
+                        </ul>
+                    </div>
+
+                  </article>
+                </div>
+            </div>
+            <!-- Робота з DOM -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingEight">
+                  <button class="accordion-button collapsed btn_accord_style" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                    <p class="header_name_item_stl">Робота з DOM</p>
+                  </button>
+                </h2>
+                <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight" data-bs-parent="#accordionFlushExample">
+                  <article class="accordion-body">
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Методи </p>
+                        <ul>
+                            <li class="list_style_accord"><code>let someElement = document.getElementById('назва ІД')</code> Повертає посилання до елементу якого ми звертаємся за ID</li>
+                            <li class="list_style_accord"><code>let someElements = document.getElementsByTagName('тег')</code> Пошук елементу за HTML тегом , та повертає його посилання. <code> ЗВЕРНІТЬ УВАГУ!!!</code> Якщо ми отримуємо багато елементів одного типу, вони повертаються масивом. Що означає якщо необхідно до них щось примінити необхідно його перебрати, для прикладу через <code> forof</code><code class="comment_code"> // Застаріло</code></li>
+                            <li class="list_style_accord"><code>let someElements = document.getElementsByClassName('назва класу')</code> Пошук елементу за класом <code class="comment_code"> // Застаріло</code> </li>
+                            <li class="list_style_accord"><code>let someElement = document.querySelector('.class')</code> Пошук елементу за CSS серектором. Можна по класу (querySelector('.class')), по id (querySelector('#class')),по тегу (querySelector('h2'))</li>
+                            <li class="list_style_accord"><code>let someElements = document.querySelectorAll('.class')</code>Пошук елементу за CSS серектором. Шукає всі елементи класу/тегу/id </li>
+                        </ul>
+                    </div>
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Властивості </p>
+                        <p>Кожен з DOM елементів має свої властивості, які можна використовувати при роботі з елементом. Для цього необхідно знайти елемент та присвоїти змінній, після чого можна використовувати ці властивості відповідно до змінної.<br> Приклад: <br> <code>let textElem = document.getElementById('some_element')<br>textElem.textContent = 'New text of this element'</code></p>
+                        <ul>
+                            <li class="list_style_accord"><code>змінна.textContent = 'новий текст'</code> Змінює текст в елементі</li>
+                            <li class="list_style_accord"><code>змінна.style.color = 'колір' (різні формати: red , #654111)</code> Зміна кольору. <br> Таким чином, використовуючи властивість <code>.style</code> можна використовувати любу допустиму для JS властивість CSS. Головне якщо в CSS властивість шрифту задається використовуючи " - " font-size, то в JS ці властивості пишуться camelСase, тобто тоді буде fontSize </li>
+                            <li class="list_style_accord"><code></code></li>
+                            <li class="list_style_accord"><code></code></li>
+                            <li class="list_style_accord"><code></code></li>
+                        </ul>
+                    </div>
 
 
                   </article>
                 </div>
             </div>
-
             <!-- Приклад розділу стилізованого -->
             <!-- <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingThree">
