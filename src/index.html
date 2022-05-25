@@ -41,32 +41,25 @@
                             <li class="list_style_accord"> При перепризначення однієї змінної використовуючи значення іншої змінної <code>(приклад змінних: let a = 10, let c = 15, можна написати c = c + a, після чого c = 25)</code> , даний запис можна використовувати в спрощеній формі <code>(приклад: let a = 10, let c = 15, c += a)</code> таким чином можна використовувати інші оператори <code> + - * / </code></li>
                         </ul>
                     </div>
-                    <div class="oper_wrapp_list content_art">
-                        <div>
-                            <p class="oper_tit"> Оператори умови: </p>
-                            <ul>
-                                <li class="list_style_accord"><code> if (){} else </code></li>
-                                <li class="list_style_accord"><code> if (){} else if (){} else {}</code></li>
-                                <li> Приклад : <br> <code> let currYear = 2022 <br> if (currYear == 2022){ <br> alert('Так, рік вірний') <br> } else { <br> alert('Рік не відповідає поточному') <br> } </code></li>
-                                <li> Якщо в умові виокристовується boolean <br> тип, то даний запис можна скоротити,<br> використовуючи тернарний вираз, приклад: <br><code> let isReady = false <br> isReady ? alert('Готово!') : alert('Не готово') </code></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <p class="oper_tit">Оператори порівняння: </p>
-                            <ul>
-                                <li><code> > </code> суворо більше </li>
-                                <li><code> < </code> суворо менше </li>
-                                <li><code> >= </code> більше або дорівнює </li>
-                                <li><code> <= </code> меньше або дорівнює </li>
-                                <li><code> == </code> перевірка рівності без звірки типу змінної </li>
-                                <li><code> === </code> сувора перевірка враховуючи тип змінної </li>
-                            </ul>
-                        </div>
+                    <div class="content_art">
+                        <p class="oper_tit"> Оператори умови: </p>
+                        <ul>
+                            <li class="list_style_accord"><code> if (){} else </code></li>
+                            <li class="list_style_accord"><code> if (){} else if (){} else {}</code></li>
+                            <li class="list_style_accord"> Приклад : <br> <code> let currYear = 2022 <br> if (currYear == 2022){ <br> alert('Так, рік вірний') <br> } else { <br> alert('Рік не відповідає поточному') <br> } </code></li>
+                            <li class="list_style_accord"> Якщо в умові виокристовується boolean <br> тип, то даний запис можна скоротити,<br> використовуючи тернарний вираз, приклад: <br><code> let isReady = false <br> isReady ? alert('Готово!') : alert('Не готово') </code></li>
+                        </ul>
+                        <p class="oper_tit">Оператори порівняння: </p>
+                        <ul>
+                            <li class="list_style_accord"><code> == </code> перевірка рівності без звірки типу змінної </li>
+                            <li class="list_style_accord"><code> === </code> сувора перевірка враховуючи тип змінної </li>
+                            <li class="list_style_accord"><code> != </code> "Не" дорівнює </li>
+                        </ul>
                     </div>
                     <div class="content_art">
                         <p class="oper_tit"> Оператори логіки: </p>
+                        <p> Логічне "І" <code>( && )</code> Виявляє операнди зліва направо, повертаючи відразу значення першого попавшогося "Хибноподібного" операнду, якщо всі значення "Правдоподібні" вертає значення останнього операнду.</p>
                         <ul>
-                            <p> Логічне "І" <code>( && )</code> Виявляє операнди зліва направо, повертаючи відразу значення першого попавшогося "Хибноподібного" операнду, якщо всі значення "Правдоподібні" вертає значення останнього операнду.</p>
                             <li class="list_style_accord"><code> && </code> Логічне "І" - <code>(приклад: exz1 && exz2)</code> В результаті, якщо оба значення <code>true</code> тоді отримуємо результат <code>true</code>, якщо хоч одне значення <code>false</code>, то ми отримуємо <code>false</code></b></li>
                             <li class="list_style_accord"><code> || </code> Логічне "АБО" -<code>(приклад: exz1 || exz2)</code> при використанні з величинами <code>boolean</code> опертору <code> || </code> поверне значення <code>true</code> якщо хоч один зних рівний <code>true</code> в іншому випадку поверне <code>false</code></li>
                             <li class="list_style_accord"><code> ! </code> Логічне "НІ" - <code>(приклад: !exz)</code> Повертає значення <code>false</code> якщо <code>exz</code> можна привести в <code>true</code> в іншому випадку повертає значення <code>true</code></li>
@@ -74,8 +67,8 @@
                     </div>
                     <div class="content_art">
                         <h3 class="sec_tit_txt_acord"> Типи даних </h3>
+                        <p>Для перевірки типу даних змінної необхідно використовувати наступний запис <code>( приклад: console.log(typeof змінна); )</code>або <code> typeof змінна </code> в консолі</p>
                         <ul>
-                            <p>Для перевірки типу даних змінної необхідно використовувати наступний запис <code>( приклад: console.log(typeof змінна); )</code>або <code> typeof змінна </code> в консолі</p>
                             <li class="list_style_accord"><code>boolean</code> може приймати значення <code>true / false</code></li>
                             <li class="list_style_accord"><code>string</code> текстове значення </li>
                             <li class="list_style_accord"><code>number</code> числове значення </li>
@@ -85,8 +78,8 @@
                     </div>
                     <div class="content_art">
                         <h3 class="sec_tit_txt_acord"> Функції </h3>
+                        <p>Значення команд:</p>
                         <ul>
-                            <p>Значення команд:</p>
                             <li class="list_style_accord"><code>return</code> - повернення значення з функції </li>
                         </ul>
                         <p>Приклад базової функції:<br> <code>function calculateAge(year){ <br> return 2022 - year<br> } <br> console.log(calculateAge(1992))</code></p>
@@ -114,7 +107,6 @@
                         <h3 class="sec_tit_txt_acord"> Цикли </h3>
                         <p>Приклади використання циклу з масивом: <br> Присутній масив <code>let cars = ['Audi','BMW','Opel','Honda']</code></p>
                         <ul>
-                            <li class="list_style_accord"><code>for (let i = 0; i < cars.length; i++){ <code class="comment_code"> // Застарілий спосіб</code><br>console.log(cars[i]);<br>};</code></li>
                             <li class="list_style_accord"><code>for (let car of cars) {<code class="comment_code"> // Новий спосіб, де car змінна являється елементом масиву cars. Такий метод називається "forof" </code><br>console.log(car);<br>}</code></li>
                         </ul>
                     </div>
@@ -206,11 +198,8 @@
                         </ul>
                         <p>Приклад функції , яка буде генерувати автоматично та повертати випадкове число в діапазоні двух цілих чисел які буде вказано: <br><code> function randomNumber (min, max){<br>return  Math.round(Math.random() * (max - min +1) + min)<br>}<br>let num = randomNumber(1,100)<br>console.log(num)</code></p>
                     </div>
-
-
                   </article>
                 </div>
-                
             </div>
             <!-- Рядки -->
             <div class="accordion-item">
@@ -527,10 +516,10 @@
                         <p class="sec_tit_txt_acord"> Методи </p>
                         <ul>
                             <li class="list_style_accord"><code>let someElement = document.getElementById('назва ІД')</code> Повертає посилання до елементу якого ми звертаємся за ID</li>
-                            <li class="list_style_accord"><code>let someElements = document.getElementsByTagName('тег')</code> Пошук елементу за HTML тегом , та повертає його посилання. <code> ЗВЕРНІТЬ УВАГУ!!!</code> Якщо ми отримуємо багато елементів одного типу, вони повертаються масивом. Що означає якщо необхідно до них щось примінити необхідно його перебрати, для прикладу через <code> forof</code><code class="comment_code"> // Застаріло</code></li>
+                            <li class="list_style_accord"><code>let someElements = document.getElementsByTagName('тег')</code> Пошук елементу за HTML тегом , та повертає його посилання. <code> ЗВЕРНІТЬ УВАГУ!!!</code> Якщо ми отримуємо багато елементів одного типу, вони повертаються у вигляді псевдо-масиву. Що означає якщо необхідно до них щось примінити необхідно його перебрати, для прикладу через <code> forof</code><code class="comment_code"> // Застаріло</code></li>
                             <li class="list_style_accord"><code>let someElements = document.getElementsByClassName('назва класу')</code> Пошук елементу за класом <code class="comment_code"> // Застаріло</code> </li>
-                            <li class="list_style_accord"><code>let someElement = document.querySelector('.class')</code> Пошук елементу за CSS серектором. Можна по класу (querySelector('.class')), по id (querySelector('#class')),по тегу (querySelector('h2'))</li>
-                            <li class="list_style_accord"><code>let someElements = document.querySelectorAll('.class')</code>Пошук елементу за CSS серектором. Шукає всі елементи класу/тегу/id </li>
+                            <li class="list_style_accord"><code>let someElement = document.querySelector('.class')</code> Пошук елементу за CSS серектором. Можна по класу (querySelector('.class')), по id (querySelector('#class')),по тегу (querySelector('h2')), завжди повертає перший елемент що попадеться</li>
+                            <li class="list_style_accord"><code>let someElements = document.querySelectorAll('.class')</code>Пошук елементу за CSS серектором. Шукає всі елементи класу/тегу/id . Вертає всі елементи в вигляді псевдо-масиву </li>
                         </ul>
                     </div>
                     <div class="content_art">
@@ -539,38 +528,44 @@
                         <ul>
                             <li class="list_style_accord"><code>змінна.textContent = 'новий текст'</code> Змінює текст в елементі</li>
                             <li class="list_style_accord"><code>змінна.style.color = 'колір' (різні формати: red , #654111)</code> Зміна кольору. <br> Таким чином, використовуючи властивість <code>.style</code> можна використовувати любу допустиму для JS властивість CSS. Головне якщо в CSS властивість шрифту задається використовуючи " - " font-size, то в JS ці властивості пишуться camelСase, тобто тоді буде fontSize </li>
-                            <li class="list_style_accord"><code></code></li>
-                            <li class="list_style_accord"><code></code></li>
-                            <li class="list_style_accord"><code></code></li>
                         </ul>
                     </div>
-
-
+                    <div class="content_art">
+                        <p class="sec_tit_txt_acord"> Події </p>
+                        <div class="pref_content">
+                            <p class="preff_txt">Список можливих подій в JavaScript</p>
+                            <a class="preff_link" href="https://developer.mozilla.org/ru/docs/Web/Events" target="_black"> Перейти до списку подій</a>
+                        </div>
+                        <p>Приклади використання подій:</p>
+                        <ul>
+                            <li class="list_style_accord click_exz"><code>змінна.onclick</code> - Виконання при кліку мишки приставка<code> on</code> обов'язкова до подій <br> Приклад використання:<br>
+                                <code>
+                                let clickExz = document.querySelector('.click_exz')<br>
+                                clickExz.onclick = () =>{<br>&nbsp;
+                                    if( clickExz.style.color === 'black'){<br>&nbsp;&nbsp;
+                                        clickExz.style.color = 'blue'<br>&nbsp;
+                                    } else {<br>&nbsp;&nbsp;
+                                        clickExz.style.color = 'black'<br>&nbsp;
+                                    }<br>
+                                }<br>
+                                </code>                                
+                            </li>
+                            <li class="list_style_accord click_exz2"><code>змінна.addEventListener('dblclick', функція ())</code> - dblclick - подвійне натискання мишкою. Даний тип відображає ще один спосіб використання подій, лише з використанням <code>.addEventListener("тип події", Функція)</code> . <br> Приклад використання:<br> <br> 
+                                <code>
+                                    let clickExz = document.querySelector('.click_exz')<br>
+                                    clickExz.addEventListener('dblclick', () => {<br>&nbsp;
+                                        if( clickExz.style.color === 'black'){<br>&nbsp&nbsp
+                                            clickExz.style.color = 'blue'<br>&nbsp
+                                        } else {<br>&nbsp&nbsp
+                                            clickExz.style.color = 'black'<br>&nbsp
+                                        }<br>
+                                    })<br>
+                                </code>
+                            </li>
+                        </ul>
+                    </div>
                   </article>
                 </div>
             </div>
-            <!-- Приклад розділу стилізованого -->
-            <!-- <div class="accordion-item">
-                <h2 class="accordion-header" id="flush-headingThree">
-                  <button class="accordion-button collapsed btn_accord_style" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                    <p class="header_name_item_stl">Числа + BigInt</p>
-                  </button>
-                </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                  <article class="accordion-body">
-                    <div class="content_art">
-                        <p class="sec_tit_txt_acord"> Змінні </p>
-                        <p>Всі змінні бажано вказувати в стилі "camelCase" (приклад: <code> let firstName = 'Ivan' </code>)</p>
-                        <ul>
-                            <li class="list_style_accord"> <code>var year = 2022</code> - Оголошення змінної з можливісттю подальшого її перезапису (метод оголошення застарівший)</li>
-                            <li class="list_style_accord"> <code>const myCountry = 'Ukraine'</code> - Змінні такого типу присутні лише для читання, перезапис даної змінної недоступний (бажано використовувати якщо змінна являється незмінною)</li>
-                            <li class="list_style_accord"> <code>let centry = 21 </code> - Актуальна форма оголошення змінної, доступна для перезапису</li>
-                        </ul>
-                    </div>
-
-                  </article>
-                </div>
-            </div> -->
-
     </body>
 </html>
