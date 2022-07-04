@@ -1,53 +1,21 @@
-// let userSec = prompt('Введіть кількість секунд')
+let block1 = document.querySelector('.first')
+let block2 = document.querySelector('.two')
+let block3 = document.querySelector('.three')
+let block4 = document.querySelector('.four')
+let block5 = document.querySelector('.five')
+let block6 = document.querySelector('.six')
+let block7 = document.querySelector('.seven')
+let block8 = document.querySelector('.eight')
 
-// let init = () => {
-//     sec = 0;
-//     setInterval(tick, 1000);
-// }
-// // clearInterval(init)
-// function tick(){
-//     if (sec < userSec){
-//         sec++;
-//     } else {
-//         return clearInterval(init)
-//     }
-//     console.log(sec)
-// }
-// init()
 
-// function dispHide () {
-//     setTimeout(dispShow, 2000)
-// }
-// function dispShow (){
-//     var element = document.querySelectorAll('.accordion-item');
-//     console.log(element)
-//     for (let elem of element){
-//         elem.classList.add("active_block")
-//     }
-// }
-// dispHide()
-// let someElem = document.getElementsByTagName('li')
-// for (let p of someElem){
-//     p.style.color = 'blue'
-// }
-// let titText = document.querySelector('.tit_text_learn')
+let arrBlock = [block1,block2,block3,block4,block5,block6,block7,block8]
 
-// function addStyles (element,text,color,bg){
-//     element.textContent = text
-//     element.style.color = color
-//     element.style.background = bg
-// }
-// setTimeout(() => {
-//     addStyles(titText, 'Перший текст', 'green', 'black')
-// },2000)
-
-// setTimeout(() => {
-//     addStyles(titText, 'Другий текст', 'red' ,' green')
-// },3000)
-
-// setTimeout(() => {
-//     addStyles(titText, 'Третій текст', 'blue' , 'yellow')
-// },4000)
+function showWithDelay(arrBlock) {
+    for (let i = 0; i < arrBlock.length; i++) {
+        setTimeout(() => { arrBlock[i].classList.add('fadeIn')}, 250 * i);
+    }
+}
+showWithDelay(arrBlock);
 let clickExz = document.querySelector('.click_exz')
 clickExz.onclick = () =>{
     if( clickExz.style.color === 'black'){
