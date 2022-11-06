@@ -1,21 +1,14 @@
-let block1 = document.querySelector('.first')
-let block2 = document.querySelector('.two')
-let block3 = document.querySelector('.three')
-let block4 = document.querySelector('.four')
-let block5 = document.querySelector('.five')
-let block6 = document.querySelector('.six')
-let block7 = document.querySelector('.seven')
-let block8 = document.querySelector('.eight')
 
-
-let arrBlock = [block1,block2,block3,block4,block5,block6,block7,block8]
-
-function showWithDelay(arrBlock) {
-    for (let i = 0; i < arrBlock.length; i++) {
-        setTimeout(() => { arrBlock[i].classList.add('fadeIn')}, 250 * i);
+// Поява блоків
+let listBlock = document.querySelectorAll('.fadeBlock')
+function showWithDelay(listBlock) {
+    for (let i = 0; i < listBlock.length; i++) {
+        setTimeout(() => { listBlock[i].classList.add('fadeIn')}, 200 * i);
     }
 }
-showWithDelay(arrBlock);
+showWithDelay(listBlock);
+// Завершення коду появи блоків
+
 let clickExz = document.querySelector('.click_exz')
 clickExz.onclick = () =>{
     if( clickExz.style.color === 'black'){
